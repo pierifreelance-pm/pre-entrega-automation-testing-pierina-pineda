@@ -1,0 +1,11 @@
+# Entorno virtual (cada uno lo crea en su máquina con requirements.txt)
+venv/
+.venv/
+
+# Archivos temporales de Python y Pytest
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Configuración local del editor
+.vscode/
