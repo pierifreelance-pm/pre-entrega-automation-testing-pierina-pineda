@@ -1,31 +1,33 @@
-19:30:33 [INFO] utils.helpers: Abriendo Google Chrome
-19:30:34 [ERROR] conftest: Test fallido. Captura guardada en C:\Users\Pierina\Documents\Curso Automatizacion BA\pre-entrega-automation-testing-pierina-pineda\reports\capturas\test_01_login_exitoso_20261004_193034.png
-19:30:35 [INFO] conftest: Cerrando el navegador
-19:30:37 [INFO] utils.helpers: Abriendo Google Chrome
-19:30:38 [INFO] utils.helpers: Navegando a https://www.saucedemo.com/
-19:30:38 [INFO] utils.helpers: Ingresando credenciales del usuario 'standard_user'
-19:30:39 [INFO] utils.helpers: Login completado, URL actual: https://www.saucedemo.com/inventory.html
-19:30:39 [INFO] conftest: Cerrando el navegador
-19:30:41 [INFO] utils.helpers: Abriendo Google Chrome
-19:30:42 [INFO] utils.helpers: Navegando a https://www.saucedemo.com/
-19:30:42 [INFO] utils.helpers: Ingresando credenciales del usuario 'standard_user'
-19:30:42 [INFO] utils.helpers: Login completado, URL actual: https://www.saucedemo.com/inventory.html
-19:30:42 [INFO] test_saucedemo: Productos encontrados: 6
-19:30:42 [INFO] test_saucedemo: Primer producto: Sauce Labs Backpack - $29.99
-19:30:42 [INFO] conftest: Cerrando el navegador
-19:30:45 [INFO] utils.helpers: Abriendo Google Chrome
-19:30:46 [INFO] utils.helpers: Navegando a https://www.saucedemo.com/
-19:30:46 [INFO] utils.helpers: Ingresando credenciales del usuario 'standard_user'
-19:30:46 [INFO] utils.helpers: Login completado, URL actual: https://www.saucedemo.com/inventory.html
-19:30:46 [INFO] conftest: Cerrando el navegador
-19:30:49 [INFO] utils.helpers: Abriendo Google Chrome
-19:30:50 [INFO] utils.helpers: Navegando a https://www.saucedemo.com/
-19:30:50 [INFO] utils.helpers: Ingresando credenciales del usuario 'standard_user'
-19:30:50 [INFO] utils.helpers: Login completado, URL actual: https://www.saucedemo.com/inventory.html
-19:30:50 [INFO] conftest: Cerrando el navegador
-19:30:53 [INFO] utils.helpers: Abriendo Google Chrome
-19:30:54 [INFO] utils.helpers: Navegando a https://www.saucedemo.com/
-19:30:54 [INFO] utils.helpers: Ingresando credenciales del usuario 'standard_user'
-19:30:54 [INFO] utils.helpers: Login completado, URL actual: https://www.saucedemo.com/inventory.html
-19:30:54 [INFO] test_saucedemo: Agregando al carrito: Sauce Labs Backpack
-19:30:54 [INFO] conftest: Cerrando el navegador
+20:18:57 [INFO] utils.helpers: Abriendo Google Chrome
+20:18:58 [INFO] utils.helpers: Navegando a https://www.saucedemo.com/
+20:18:58 [INFO] utils.helpers: Ingresando credenciales del usuario 'standard_user'
+20:18:58 [INFO] utils.helpers: Login completado, URL actual: https://www.saucedemo.com/inventory.html
+20:18:58 [INFO] conftest: Cerrando el navegador
+20:19:01 [INFO] utils.helpers: Abriendo Google Chrome
+20:19:02 [INFO] utils.helpers: Navegando a https://www.saucedemo.com/
+20:19:02 [INFO] utils.helpers: Ingresando credenciales del usuario 'standard_user'
+20:19:03 [INFO] utils.helpers: Login completado, URL actual: https://www.saucedemo.com/inventory.html
+20:19:03 [INFO] conftest: Cerrando el navegador
+20:19:05 [INFO] utils.helpers: Abriendo Google Chrome
+20:19:06 [INFO] utils.helpers: Navegando a https://www.saucedemo.com/
+20:19:06 [INFO] utils.helpers: Ingresando credenciales del usuario 'standard_user'
+20:19:06 [INFO] utils.helpers: Login completado, URL actual: https://www.saucedemo.com/inventory.html
+20:19:06 [INFO] test_saucedemo: Productos encontrados: 6
+20:19:06 [INFO] test_saucedemo: Primer producto: Sauce Labs Backpack - $29.99
+20:19:06 [INFO] conftest: Cerrando el navegador
+20:19:09 [INFO] utils.helpers: Abriendo Google Chrome
+20:19:10 [INFO] utils.helpers: Navegando a https://www.saucedemo.com/
+20:19:10 [INFO] utils.helpers: Ingresando credenciales del usuario 'standard_user'
+20:19:10 [INFO] utils.helpers: Login completado, URL actual: https://www.saucedemo.com/inventory.html
+20:19:11 [INFO] conftest: Cerrando el navegador
+20:19:13 [INFO] utils.helpers: Abriendo Google Chrome
+20:19:14 [INFO] utils.helpers: Navegando a https://www.saucedemo.com/
+20:19:14 [INFO] utils.helpers: Ingresando credenciales del usuario 'standard_user'
+20:19:15 [INFO] utils.helpers: Login completado, URL actual: https://www.saucedemo.com/inventory.html
+20:19:15 [INFO] conftest: Cerrando el navegador
+20:19:17 [INFO] utils.helpers: Abriendo Google Chrome
+20:19:18 [INFO] utils.helpers: Navegando a https://www.saucedemo.com/
+20:19:18 [INFO] utils.helpers: Ingresando credenciales del usuario 'standard_user'
+20:19:18 [INFO] utils.helpers: Login completado, URL actual: https://www.saucedemo.com/inventory.html
+20:19:18 [INFO] test_saucedemo: Agregando al carrito: Sauce Labs Backpack
+20:19:19 [INFO] conftest: Cerrando el navegador

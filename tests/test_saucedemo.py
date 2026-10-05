@@ -9,7 +9,7 @@ Por eso los tests son independientes: se pueden correr solos o en cualquier
 orden, y si uno falla no arrastra a los demás.
 """
 import logging
-
+from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 
 from utils.helpers import (
@@ -37,19 +37,17 @@ logger = logging.getLogger(__name__)
 
 # 1. Automatización de Login
 def test_01_login_exitoso(driver):
-    driver.get("https://www.saucedemo.com/")
-    driver.find_element(By.ID, "user-name").send_keys("standard_user")
-    driver.find_element(By.ID, "password").send_keys("secret_sauce")
-    driver.find_element(By.ID, "login-button").click()
+    usuario = cargar_usuario()
+
+    login(driver, usuario["username"], usuario["password"])
 
     assert "/inventory.html" in driver.current_url, "ERROR: No se redirigió a /inventory.html"
     titulo = esperar_visible(driver, TITULO_PAGINA).text
     assert titulo == "Products", f'ERROR: Título esperado "Products", obtenido "{titulo}"'
 
 
-# ---------------------------------------------------------------------------
+
 # 2. Navegación y verificación del catálogo
-# ---------------------------------------------------------------------------
 def test_02_verificar_titulo_inventario(driver_logueado):
     titulo_ventana = driver_logueado.title
     titulo_seccion = esperar_visible(driver_logueado, TITULO_PAGINA).text
@@ -84,9 +82,8 @@ def test_04_validar_interfaz(driver_logueado):
     assert esperar_visible(driver_logueado, ICONO_CARRITO).is_displayed(), "ERROR: Carrito no está visible"
 
 
-# ---------------------------------------------------------------------------
 # 3. Interacción con productos (carrito)
-# ---------------------------------------------------------------------------
+
 def test_05_agregar_producto_al_carrito(driver_logueado):
     esperar_visible(driver_logueado, BOTON_PRIMER_PRODUCTO).click()
 
