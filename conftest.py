@@ -6,12 +6,15 @@ Acá definimos:
   - Un hook que saca una captura de pantalla cuando un test falla.
 """
 import logging
+import re
 from datetime import datetime
 from pathlib import Path
 
 import pytest
 
-from utils.helpers import cargar_usuario, crear_driver, login
+from pages.inventario_page import InventarioPage
+from pages.login_page import LoginPage
+from utils.helpers import cargar_usuario, crear_driver
 
 logger = logging.getLogger(__name__)
 
@@ -32,11 +35,12 @@ def driver():
 
 
 @pytest.fixture
-def driver_logueado(driver):
-    """Navegador que ya pasó por el login (para los tests de catálogo y carrito)."""
+def inventario(driver):
+    """Hace login y devuelve la página de inventario lista para usar
+    (para los tests de catálogo, carrito y checkout)."""
     usuario = cargar_usuario()
-    login(driver, usuario["username"], usuario["password"])
-    return driver
+    LoginPage(driver).abrir().iniciar_sesion(usuario["username"], usuario["password"])
+    return InventarioPage(driver).esperar_carga()
 
 
 @pytest.hookimpl(hookwrapper=True)
@@ -54,7 +58,9 @@ def pytest_runtest_makereport(item, call):
 
     CARPETA_CAPTURAS.mkdir(parents=True, exist_ok=True)
     marca_tiempo = datetime.now().strftime("%Y%m%d_%H%M%S")
-    ruta_captura = CARPETA_CAPTURAS / f"{item.name}_{marca_tiempo}.png"
+    # Nombre descriptivo: nombre del test + fecha y hora (sin caracteres raros)
+    nombre_test = re.sub(r"[^\w\-]", "_", item.name)
+    ruta_captura = CARPETA_CAPTURAS / f"{nombre_test}_{marca_tiempo}.png"
     navegador.save_screenshot(str(ruta_captura))
     logger.error("Test fallido. Captura guardada en %s", ruta_captura)
 
