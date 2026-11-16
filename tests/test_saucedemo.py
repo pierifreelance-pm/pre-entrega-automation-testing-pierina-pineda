@@ -9,7 +9,6 @@ Por eso los tests son independientes: se pueden correr solos o en cualquier
 orden, y si uno falla no arrastra a los demás.
 """
 import logging
-from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 
 from utils.helpers import (
